@@ -93,6 +93,7 @@ def curl(vf):
                     buffer[(x - 1), y], \
                     buffer[(x + 1) % w, y]
             
-            dpf[x, y, :] = [v[0] - (r - l) / 2, v[1] - (u - d) / 2]
+            dpf[x, y, :] = [(r - l) / 2, (u - d) / 2]
 
-    return pf
+    print(dpf.shape)
+    return dpf
